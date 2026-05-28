@@ -152,6 +152,7 @@ export const navLinks = [
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Service Area', href: '/service-area' },
+  { label: 'FAQs', href: '/faqs' },
 ] as const
 
 // ─── Reviews ─────────────────────────────────────────────────────────────────

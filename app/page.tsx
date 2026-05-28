@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Hero from '@/components/Hero'
 import Button from '@/components/ui/Button'
 import Reviews from '@/components/Reviews'
-import { interiorImages, droneImages, floorPlanImages, virtualStagingImages } from '@/lib/data'
+import { interiorImages, droneImages, floorPlanImages, virtualStagingImages, reviews } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Jaeco Real Estate Media — Real Estate Photography in Delaware, PA, MD & NJ',
@@ -30,7 +30,20 @@ const jsonLd = {
   },
   areaServed: ['Delaware', 'Pennsylvania', 'Maryland', 'New Jersey'],
   priceRange: '$$',
-  image: 'https://www.jaecomedia.com/images/portfolio/interior/interior-06.png',
+  image: 'https://www.jaecomedia.com/images/portfolio/interior/interior-01.png',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: String(reviews.length),
+    bestRating: '5',
+    worstRating: '5',
+  },
+  review: reviews.map((r) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.name },
+    reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+    reviewBody: r.body,
+  })),
   sameAs: [],
 }
 
