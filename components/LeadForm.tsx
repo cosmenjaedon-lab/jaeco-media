@@ -255,22 +255,6 @@ export default function LeadForm() {
         />
       </div>
 
-      {/* SMS Consent */}
-      <div className="md:col-span-2 flex flex-col gap-4">
-        <label className="flex items-start gap-3 cursor-pointer">
-          <input type="checkbox" name="consentTransactional" className="mt-0.5 shrink-0 accent-[#0A0A0A]" />
-          <span className="text-[11px] text-[#6B6B6B] leading-relaxed">
-            By checking this box, I consent to receive non-marketing text messages from Jaeco Real Estate Media about my project inquiry, service updates, appointment reminders, and account communications. Message frequency varies, message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.
-          </span>
-        </label>
-        <label className="flex items-start gap-3 cursor-pointer">
-          <input type="checkbox" name="consentMarketing" className="mt-0.5 shrink-0 accent-[#0A0A0A]" />
-          <span className="text-[11px] text-[#6B6B6B] leading-relaxed">
-            By checking this box, I consent to receive marketing and promotional messages including special offers, discounts, and new service updates from Jaeco Real Estate Media at the phone number provided. Frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.
-          </span>
-        </label>
-      </div>
-
       {/* Submit */}
       <div className="md:col-span-2 flex flex-col gap-4">
         <Button type="submit" disabled={formState === 'loading'}>
