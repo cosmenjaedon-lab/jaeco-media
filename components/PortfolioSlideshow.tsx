@@ -42,12 +42,6 @@ export default function PortfolioSlideshow({
     return () => window.removeEventListener('keydown', handle)
   }, [prev, next, lightboxIndex])
 
-  // Auto-advance every 5 seconds, pause when lightbox is open
-  useEffect(() => {
-    if (lightboxIndex !== null || images.length <= 1) return
-    const timer = setInterval(next, 5000)
-    return () => clearInterval(timer)
-  }, [next, lightboxIndex, images.length])
 
   if (images.length === 0) return null
 

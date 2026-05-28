@@ -21,8 +21,8 @@ export default function Hero() {
 
           <h1 className="font-black tracking-tighter leading-[0.9] text-white mb-8"
               style={{ fontSize: 'clamp(3.5rem, 9vw, 7.5rem)' }}>
-            <span className="block">Every listing.</span>
-            <span className="block">Perfectly framed.</span>
+            <span className="block">Homes that sell.</span>
+            <span className="block">Photos that do it.</span>
           </h1>
 
           <p className="text-sm md:text-base text-white/55 max-w-sm leading-relaxed mb-10">
