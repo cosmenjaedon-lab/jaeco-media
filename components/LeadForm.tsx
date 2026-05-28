@@ -63,7 +63,7 @@ export default function LeadForm() {
     const data = new FormData(form)
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://hook.us2.make.com/l2g2hwivxjboi2yuefq2bb3atgya6g5l', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -74,8 +74,7 @@ export default function LeadForm() {
           services: selectedServices,
           address: data.get('address'),
           message: data.get('message'),
-          consentTransactional: data.get('consentTransactional') === 'on',
-          consentMarketing: data.get('consentMarketing') === 'on',
+          submittedAt: new Date().toISOString(),
         }),
       })
 
