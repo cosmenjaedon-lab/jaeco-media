@@ -88,7 +88,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 60vw"
               />
               <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
-                Interior /
+                Interior
               </p>
             </Link>
 
@@ -102,7 +102,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
               <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
-                Aerial /
+                Aerial
               </p>
             </Link>
 
@@ -116,7 +116,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
               <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
-                Virtual Staging /
+                Virtual Staging
               </p>
             </Link>
           </div>
@@ -131,7 +131,7 @@ export default function HomePage() {
               sizes="100vw"
             />
             <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
-              Floor Plans /
+              Floor Plans
             </p>
           </Link>
 
