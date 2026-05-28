@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -20,6 +20,7 @@ export default function PortfolioSlideshow({
 }: PortfolioSlideshowProps) {
   const [current, setCurrent] = useState(0)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const touchStartX = useRef<number | null>(null)
 
   const prev = useCallback(
     () => setCurrent((c) => (c - 1 + images.length) % images.length),
@@ -57,6 +58,13 @@ export default function PortfolioSlideshow({
         className="relative group w-full aspect-video overflow-hidden cursor-zoom-in select-none"
         style={{ backgroundColor: slidesBg }}
         onClick={() => setLightboxIndex(current)}
+        onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX }}
+        onTouchEnd={(e) => {
+          if (touchStartX.current === null) return
+          const diff = touchStartX.current - e.changedTouches[0].clientX
+          if (Math.abs(diff) > 50) diff > 0 ? next() : prev()
+          touchStartX.current = null
+        }}
       >
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
