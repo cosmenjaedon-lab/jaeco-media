@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronDown, Check } from 'lucide-react'
+import Link from 'next/link'
 import Button from '@/components/ui/Button'
 
 type FormState = 'idle' | 'loading' | 'success' | 'error'
@@ -256,6 +257,12 @@ export default function LeadForm() {
 
       {/* Submit */}
       <div className="md:col-span-2 flex flex-col gap-4">
+        <p className="text-xs text-[#6B6B6B]">
+          Have a question first?{' '}
+          <Link href="/faqs" className="underline hover:text-[#0A0A0A] transition-colors">
+            Check the FAQ
+          </Link>
+        </p>
         <Button type="submit" disabled={formState === 'loading'}>
           {formState === 'loading' ? 'Sending…' : 'Request a Quote'}
         </Button>
