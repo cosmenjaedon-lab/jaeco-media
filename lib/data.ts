@@ -88,7 +88,6 @@ export interface PortfolioImage {
 // Portfolio — Interior & Exterior Photography
 export const interiorImages: PortfolioImage[] = [
   { src: '/images/portfolio/interior/interior-01.png', alt: 'Interior real estate photo 1' },
-  { src: '/images/portfolio/interior/interior-02.png', alt: 'Interior real estate photo 2' },
   { src: '/images/portfolio/interior/interior-03.png', alt: 'Interior real estate photo 3' },
   { src: '/images/portfolio/interior/interior-04.png', alt: 'Interior real estate photo 4' },
   { src: '/images/portfolio/interior/interior-05.png', alt: 'Interior real estate photo 5' },
