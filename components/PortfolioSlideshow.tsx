@@ -45,8 +45,18 @@ export default function PortfolioSlideshow({
 
   if (images.length === 0) return null
 
+  // Preload adjacent slides so they're ready before the user gets there
+  const nextIndex = (current + 1) % images.length
+  const prevIndex = (current - 1 + images.length) % images.length
+
   return (
     <div>
+      {/* Hidden preload images for next and previous slides */}
+      <div className="sr-only" aria-hidden="true">
+        <Image src={images[nextIndex].src} alt="" fill sizes="1px" />
+        {images.length > 2 && <Image src={images[prevIndex].src} alt="" fill sizes="1px" />}
+      </div>
+
       {/* Full-bleed slide area */}
       <div
         className="relative group w-full aspect-video overflow-hidden cursor-zoom-in select-none"
