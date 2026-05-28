@@ -65,8 +65,8 @@ export default function HomePage() {
 
           {/* Asymmetric grid: large left + two stacked right */}
           <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-2 md:gap-3">
-            {/* Large feature image */}
-            <div className="relative aspect-[4/3] md:aspect-auto md:row-span-2 bg-[#0A0A0A] overflow-hidden group">
+            {/* Large feature image — Interior */}
+            <Link href="/portfolio#interior" className="relative aspect-[4/3] md:aspect-auto md:row-span-2 bg-[#0A0A0A] overflow-hidden group block">
               <Image
                 src={interiorImages[0].src}
                 alt={interiorImages[0].alt}
@@ -77,10 +77,10 @@ export default function HomePage() {
               <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
                 Interior /
               </p>
-            </div>
+            </Link>
 
             {/* Aerial */}
-            <div className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group">
+            <Link href="/portfolio#aerial" className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group block">
               <Image
                 src={droneImages[0].src}
                 alt={droneImages[0].alt}
@@ -91,10 +91,10 @@ export default function HomePage() {
               <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
                 Aerial /
               </p>
-            </div>
+            </Link>
 
             {/* Virtual Staging */}
-            <div className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group">
+            <Link href="/portfolio#virtual-staging" className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group block">
               <Image
                 src={virtualStagingImages[0].src}
                 alt={virtualStagingImages[0].alt}
@@ -105,11 +105,11 @@ export default function HomePage() {
               <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
                 Virtual Staging /
               </p>
-            </div>
+            </Link>
           </div>
 
           {/* Full-width floor plan strip */}
-          <div className="relative mt-2 md:mt-3 aspect-[21/9] bg-[#0A0A0A] overflow-hidden group">
+          <Link href="/portfolio#floor-plans" className="relative mt-2 md:mt-3 aspect-[21/9] bg-[#0A0A0A] overflow-hidden group block">
             <Image
               src={floorPlanImages[0].src}
               alt={floorPlanImages[0].alt}
@@ -120,7 +120,7 @@ export default function HomePage() {
             <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
               Floor Plans /
             </p>
-          </div>
+          </Link>
 
           <div className="mt-8 md:hidden">
             <Button href="/portfolio" variant="outline-dark">View All Work →</Button>

@@ -23,47 +23,51 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    label: 'Photography',
-    title: 'Interior & Exterior',
+    id: ‘interior’,
+    label: ‘Photography’,
+    title: ‘Interior & Exterior’,
     subtitle:
-      'Professional listing photos that capture every angle and showcase each property at its absolute best.',
+      ‘Professional listing photos that capture every angle and showcase each property at its absolute best.’,
     images: interiorImages,
-    objectFit: 'cover' as const,
-    bg: 'white',
-    slidesBg: '#0A0A0A',
+    objectFit: ‘cover’ as const,
+    bg: ‘white’,
+    slidesBg: ‘#0A0A0A’,
     light: false,
   },
   {
-    label: 'Aerial',
-    title: 'Drone Photography',
+    id: ‘aerial’,
+    label: ‘Aerial’,
+    title: ‘Drone Photography’,
     subtitle:
       "Bird’s-eye perspectives that reveal the full scope of a property — land, location, and surroundings.",
     images: droneImages,
-    objectFit: 'cover' as const,
-    bg: 'dark',
-    slidesBg: '#0A0A0A',
+    objectFit: ‘cover’ as const,
+    bg: ‘dark’,
+    slidesBg: ‘#0A0A0A’,
     light: true,
   },
   {
-    label: 'Floor Plans',
-    title: 'Measured Plans',
+    id: ‘floor-plans’,
+    label: ‘Floor Plans’,
+    title: ‘Measured Plans’,
     subtitle:
-      'Clean, accurate floor plans that help buyers understand the layout and flow before stepping foot inside.',
+      ‘Clean, accurate floor plans that help buyers understand the layout and flow before stepping foot inside.’,
     images: floorPlanImages,
-    objectFit: 'contain' as const,
-    bg: 'surface',
-    slidesBg: '#F5F5F5',
+    objectFit: ‘contain’ as const,
+    bg: ‘surface’,
+    slidesBg: ‘#F5F5F5’,
     light: false,
   },
   {
-    label: 'Virtual Staging',
-    title: 'Staged to Sell',
+    id: ‘virtual-staging’,
+    label: ‘Virtual Staging’,
+    title: ‘Staged to Sell’,
     subtitle:
-      'Photorealistic virtual staging that transforms vacant spaces and helps buyers picture life in the home.',
+      ‘Photorealistic virtual staging that transforms vacant spaces and helps buyers picture life in the home.’,
     images: virtualStagingImages,
-    objectFit: 'cover' as const,
-    bg: 'white',
-    slidesBg: '#0A0A0A',
+    objectFit: ‘cover’ as const,
+    bg: ‘white’,
+    slidesBg: ‘#0A0A0A’,
     light: false,
   },
 ]
@@ -92,7 +96,7 @@ export default function PortfolioPage() {
 
       {/* 4 Sections */}
       {sections.map((section) => (
-        <section key={section.title} className={`${bgClass[section.bg]} pb-20 md:pb-28`}>
+        <section key={section.title} id={section.id} className={`${bgClass[section.bg]} pb-20 md:pb-28`}>
           {/* Section heading */}
           <div className="max-w-7xl mx-auto px-6 md:px-10 pt-14 md:pt-20 pb-10">
             <p
