@@ -181,7 +181,7 @@ export default function HomePage() {
               <p className="mt-6 text-sm text-[#6B6B6B] leading-relaxed max-w-sm">
                 No hidden fees. Clear deliverables. Every shoot includes professional editing and fast turnaround.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 hidden md:block">
                 <Button href="/pricing">See Pricing →</Button>
               </div>
             </div>
@@ -200,6 +200,11 @@ export default function HomePage() {
               <p className="text-[10px] tracking-[0.2em] uppercase text-[#C0C0C0] mt-2 text-right">
                 Starting from
               </p>
+            </div>
+
+            {/* Button below price on mobile only */}
+            <div className="md:hidden">
+              <Button href="/pricing">See Pricing →</Button>
             </div>
           </div>
         </div>
