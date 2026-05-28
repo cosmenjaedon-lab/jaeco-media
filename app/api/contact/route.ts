@@ -17,6 +17,8 @@ export async function POST(request: Request) {
         services: body.services,
         address: body.address,
         message: body.message,
+        consentTransactional: body.consentTransactional ?? false,
+        consentMarketing: body.consentMarketing ?? false,
         submittedAt: new Date().toISOString(),
       }),
     })
