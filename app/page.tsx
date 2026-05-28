@@ -84,6 +84,7 @@ export default function HomePage() {
                 src={interiorImages[0].src}
                 alt={interiorImages[0].alt}
                 fill
+                priority
                 className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90"
                 sizes="(max-width: 768px) 100vw, 60vw"
               />

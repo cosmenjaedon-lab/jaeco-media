@@ -30,7 +30,7 @@ export default function Reviews() {
         <div className="relative bg-[#F5F5F5] p-10 md:p-14 mb-4 overflow-hidden">
           <span
             className="absolute top-4 left-6 font-black leading-none select-none pointer-events-none text-[#E0E0E0]"
-            style={{ fontSize: '10rem' }}
+            style={{ fontSize: 'clamp(5rem, 20vw, 10rem)' }}
             aria-hidden="true"
           >
             &ldquo;

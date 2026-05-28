@@ -76,7 +76,7 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext }: Lig
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.18 }}
-          className="relative w-full max-w-5xl max-h-[85vh] px-16 md:px-20 h-[85vh]"
+          className="relative w-full max-w-5xl max-h-[85vh] px-4 md:px-16 h-[85vh]"
           onClick={(e) => e.stopPropagation()}
         >
           <Image

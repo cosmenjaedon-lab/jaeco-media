@@ -184,7 +184,7 @@ export default function LeadForm() {
               />
 
               {/* Dropdown panel */}
-              <div className="absolute top-full left-0 right-0 z-10 bg-white border border-[#E0E0E0] border-t-0 shadow-sm">
+              <div className="absolute top-full left-0 right-0 z-10 bg-white border border-[#E0E0E0] border-t-0 shadow-sm max-h-[50vh] overflow-y-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2">
                   {serviceOptions.map((service) => {
                     const checked = selectedServices.includes(service)
