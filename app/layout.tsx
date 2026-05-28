@@ -51,21 +51,14 @@ export const metadata: Metadata = {
     title: 'Jaeco Real Estate Media — Real Estate Photography',
     description:
       'Premium real estate photography, drone aerials, floor plans, and virtual staging. Serving Delaware, PA, MD & NJ.',
-    images: [
-      {
-        url: '/images/portfolio/interior/interior-01.png',
-        width: 1200,
-        height: 630,
-        alt: 'Jaeco Real Estate Media — Professional Real Estate Photography',
-      },
-    ],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Jaeco Real Estate Media — Homes that sell.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Jaeco Real Estate Media — Real Estate Photography',
     description:
       'Premium real estate photography, drone aerials, floor plans, and virtual staging. Serving Delaware, PA, MD & NJ.',
-    images: ['/images/portfolio/interior/interior-01.png'],
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: BASE_URL,
