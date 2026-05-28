@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import Hero from '@/components/Hero'
-import SectionHeader from '@/components/ui/SectionHeader'
 import Button from '@/components/ui/Button'
 import Reviews from '@/components/Reviews'
-import { serviceAreas, interiorImages, droneImages, floorPlanImages, virtualStagingImages } from '@/lib/data'
+import { interiorImages, droneImages, floorPlanImages, virtualStagingImages } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Jaeco Real Estate Media — Real Estate Photography in Delaware, PA, MD & NJ',
@@ -43,79 +43,150 @@ export default function HomePage() {
       />
       <Hero />
 
-      {/* Portfolio teaser */}
+      {/* Portfolio teaser — asymmetric editorial layout */}
       <section className="py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex items-end justify-between mb-10">
-            <SectionHeader label="Portfolio" title="The Work" />
-            <Button href="/portfolio" variant="outline-dark" className="hidden md:inline-flex shrink-0 ml-8">
+
+          {/* Heading row */}
+          <div className="flex items-baseline justify-between mb-10 gap-6">
+            <h2
+              className="font-black tracking-tighter leading-[0.9] text-[#0A0A0A]"
+              style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}
+            >
+              The Work
+            </h2>
+            <Link
+              href="/portfolio"
+              className="hidden md:inline-flex shrink-0 text-[11px] font-semibold tracking-[0.15em] uppercase text-[#6B6B6B] hover:text-[#0A0A0A] transition-colors"
+            >
               View All →
-            </Button>
+            </Link>
           </div>
 
-          {/* One image from each portfolio category */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-            {[
-              { img: interiorImages[0],       label: 'Interior' },
-              { img: droneImages[0],           label: 'Aerial' },
-              { img: floorPlanImages[0],       label: 'Floor Plans' },
-              { img: virtualStagingImages[0],  label: 'Virtual Staging' },
-            ].map(({ img, label }) => (
-              <div key={label} className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover group-hover:scale-[1.04] transition-transform duration-500 opacity-90"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-                <p className="absolute bottom-3 left-3 text-[9px] font-semibold tracking-[0.2em] uppercase text-white/70">
-                  {label}
-                </p>
-              </div>
-            ))}
+          {/* Asymmetric grid: large left + two stacked right */}
+          <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-2 md:gap-3">
+            {/* Large feature image */}
+            <div className="relative aspect-[4/3] md:aspect-auto md:row-span-2 bg-[#0A0A0A] overflow-hidden group">
+              <Image
+                src={interiorImages[0].src}
+                alt={interiorImages[0].alt}
+                fill
+                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+              <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
+                Interior /
+              </p>
+            </div>
+
+            {/* Aerial */}
+            <div className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group">
+              <Image
+                src={droneImages[0].src}
+                alt={droneImages[0].alt}
+                fill
+                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90"
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+              <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
+                Aerial /
+              </p>
+            </div>
+
+            {/* Virtual Staging */}
+            <div className="relative aspect-[4/3] bg-[#0A0A0A] overflow-hidden group">
+              <Image
+                src={virtualStagingImages[0].src}
+                alt={virtualStagingImages[0].alt}
+                fill
+                className="object-cover group-hover:scale-[1.03] transition-transform duration-700 opacity-90"
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+              <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
+                Virtual Staging /
+              </p>
+            </div>
+          </div>
+
+          {/* Full-width floor plan strip */}
+          <div className="relative mt-2 md:mt-3 aspect-[21/9] bg-[#0A0A0A] overflow-hidden group">
+            <Image
+              src={floorPlanImages[0].src}
+              alt={floorPlanImages[0].alt}
+              fill
+              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 opacity-90"
+              sizes="100vw"
+            />
+            <p className="absolute bottom-4 left-4 text-[10px] font-semibold tracking-[0.2em] uppercase text-white/70">
+              Floor Plans /
+            </p>
           </div>
 
           <div className="mt-8 md:hidden">
-            <Button href="/portfolio" variant="outline-dark">
-              View All Work →
-            </Button>
+            <Button href="/portfolio" variant="outline-dark">View All Work →</Button>
           </div>
         </div>
       </section>
 
-      {/* Service area strip */}
-      <section className="py-12 bg-[#F5F5F5] border-y border-[#E0E0E0]">
+      {/* Service area — dark editorial band */}
+      <section className="bg-[#0A0A0A] py-10 md:py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-            <p className="text-[10px] font-semibold tracking-[0.25em] uppercase text-[#6B6B6B] shrink-0">
-              Serving
-            </p>
-            {serviceAreas.length > 0 ? (
-              <p className="text-sm font-medium text-[#0A0A0A]">
-                {serviceAreas.join(' · ')}
-              </p>
-            ) : (
-              <p className="text-sm text-[#B0B0B0]">Service areas coming soon</p>
-            )}
-            <Button href="/service-area" variant="outline-dark" className="shrink-0">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              {['Delaware', 'Pennsylvania', 'Maryland', 'New Jersey'].map((state, i, arr) => (
+                <div key={state} className="flex items-center gap-6">
+                  <span className="text-xl md:text-2xl font-black tracking-tight text-white">
+                    {state}
+                  </span>
+                  {i < arr.length - 1 && (
+                    <span className="w-px h-5 bg-white/20 shrink-0" />
+                  )}
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/service-area"
+              className="shrink-0 text-[11px] font-semibold tracking-[0.15em] uppercase text-white/50 hover:text-white transition-colors"
+            >
               See All Areas →
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Pricing teaser */}
-      <section className="py-20 md:py-28">
+      {/* Pricing teaser — split layout with outlined number */}
+      <section className="py-20 md:py-28 border-b border-[#E0E0E0]">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="max-w-xl">
-            <SectionHeader
-              label="Pricing"
-              title="Simple, Transparent Packages"
-              subtitle="No hidden fees. Clear deliverables. Every shoot includes professional editing and fast turnaround."
-            />
-            <div className="mt-10">
-              <Button href="/pricing">See Pricing →</Button>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-10">
+            <div className="max-w-lg">
+              <h2
+                className="font-black tracking-tighter leading-[0.92] text-[#0A0A0A]"
+                style={{ fontSize: 'clamp(2.5rem, 6vw, 5.5rem)' }}
+              >
+                Simple,<br />Transparent<br />Pricing.
+              </h2>
+              <p className="mt-6 text-sm text-[#6B6B6B] leading-relaxed max-w-sm">
+                No hidden fees. Clear deliverables. Every shoot includes professional editing and fast turnaround.
+              </p>
+              <div className="mt-10">
+                <Button href="/pricing">See Pricing →</Button>
+              </div>
+            </div>
+
+            {/* Outlined price number */}
+            <div className="hidden md:block shrink-0 select-none" aria-hidden="true">
+              <p
+                className="font-black tracking-tighter leading-none text-transparent"
+                style={{
+                  fontSize: 'clamp(6rem, 12vw, 11rem)',
+                  WebkitTextStroke: '2px #E0E0E0',
+                }}
+              >
+                $175
+              </p>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-[#C0C0C0] mt-2 text-right">
+                Starting from
+              </p>
             </div>
           </div>
         </div>
@@ -126,21 +197,14 @@ export default function HomePage() {
       {/* CTA band */}
       <section className="bg-[#0A0A0A] py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row md:items-center md:justify-between gap-10">
-          <div>
-            <p className="text-[10px] font-semibold tracking-[0.25em] uppercase text-white/30 mb-5">
-              Ready to Book
-            </p>
-            <h2
-              className="font-black tracking-tighter text-white leading-[0.95]"
-              style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
-            >
-              Your next listing<br />deserves better photos.
-            </h2>
-          </div>
+          <h2
+            className="font-black tracking-tighter text-white leading-[0.9]"
+            style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)' }}
+          >
+            Your next listing<br />deserves better photos.
+          </h2>
           <div className="shrink-0">
-            <Button href="/contact" variant="light">
-              Book a Shoot →
-            </Button>
+            <Button href="/contact" variant="light">Book a Shoot →</Button>
           </div>
         </div>
       </section>
