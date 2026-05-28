@@ -9,7 +9,21 @@ export const siteConfig = {
 
 // ⏸ Add the cities and regions you serve here
 // Example: 'Nashville, TN'
-export const serviceAreas: string[] = []
+export const serviceAreas: string[] = [
+  'Wilmington, DE',
+  'Newark, DE',
+  'Dover, DE',
+  'Middletown, DE',
+  'Philadelphia, PA',
+  'West Chester, PA',
+  'Lancaster, PA',
+  'Baltimore, MD',
+  'Annapolis, MD',
+  'Bel Air, MD',
+  'Camden, NJ',
+  'Cherry Hill, NJ',
+  'Atlantic City, NJ',
+]
 
 // ─── Pricing ────────────────────────────────────────────────────────────────
 
