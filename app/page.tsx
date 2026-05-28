@@ -53,7 +53,7 @@ export default function HomePage() {
               className="font-black tracking-tighter leading-[0.9] text-[#0A0A0A]"
               style={{ fontSize: 'clamp(3rem, 8vw, 7rem)' }}
             >
-              The Work
+              See Our Portfolio
             </h2>
             <Link
               href="/portfolio"
