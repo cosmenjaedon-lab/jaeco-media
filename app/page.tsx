@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Hero from '@/components/Hero'
 import SectionHeader from '@/components/ui/SectionHeader'
@@ -5,9 +6,41 @@ import Button from '@/components/ui/Button'
 import Reviews from '@/components/Reviews'
 import { serviceAreas, interiorImages, droneImages, floorPlanImages, virtualStagingImages } from '@/lib/data'
 
+export const metadata: Metadata = {
+  title: 'Jaeco Real Estate Media — Real Estate Photography in Delaware, PA, MD & NJ',
+  description:
+    'Homes that sell. Photos that do it. Professional real estate photography, drone aerials, virtual staging, floor plans, and video tours serving Delaware, Pennsylvania, Maryland, and New Jersey.',
+  alternates: { canonical: 'https://www.jaecomedia.com' },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Jaeco Real Estate Media',
+  description: 'Premium real estate photography, drone aerials, floor plans, virtual staging, and video tours.',
+  url: 'https://www.jaecomedia.com',
+  telephone: '+14247680219',
+  email: 'Cosmenjaedon@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bear',
+    addressRegion: 'DE',
+    postalCode: '19701',
+    addressCountry: 'US',
+  },
+  areaServed: ['Delaware', 'Pennsylvania', 'Maryland', 'New Jersey'],
+  priceRange: '$$',
+  image: 'https://www.jaecomedia.com/images/portfolio/interior/interior-06.png',
+  sameAs: [],
+}
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
 
       {/* Portfolio teaser */}

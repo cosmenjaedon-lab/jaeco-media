@@ -4,8 +4,15 @@ import LeadForm from '@/components/LeadForm'
 import { siteConfig } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Contact — Jaeco Real Estate Media',
-  description: 'Book a real estate photography shoot or request a quote.',
+  title: 'Book a Shoot — Request a Real Estate Photography Quote',
+  description:
+    'Book a real estate photography shoot with Jaeco Real Estate Media. Request a quote for interior, drone, floor plans, virtual staging, or video tours in Delaware, PA, MD & NJ.',
+  alternates: { canonical: 'https://www.jaecomedia.com/contact' },
+  openGraph: {
+    title: 'Book a Shoot — Jaeco Real Estate Media',
+    description: 'Request a quote for professional real estate photography and media.',
+    url: 'https://www.jaecomedia.com/contact',
+  },
 }
 
 export default function ContactPage() {

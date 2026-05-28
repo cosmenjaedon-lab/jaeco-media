@@ -3,9 +3,15 @@ import ServiceAreaMapWrapper from '@/components/ServiceAreaMapWrapper'
 import Button from '@/components/ui/Button'
 
 export const metadata: Metadata = {
-  title: 'Service Area — Jaeco Real Estate Media',
+  title: 'Service Area — Delaware, PA, MD & NJ Real Estate Photography',
   description:
-    'Real estate photography serving Delaware, New Jersey, eastern Pennsylvania, and Maryland — up to 100 miles from Bear, DE.',
+    'Jaeco Real Estate Media serves the entire Delaware Valley and surrounding region — Delaware, New Jersey, Pennsylvania, and Maryland within 100 miles of Bear, DE. Including Wilmington, Philadelphia, Baltimore, and more.',
+  alternates: { canonical: 'https://www.jaecomedia.com/service-area' },
+  openGraph: {
+    title: 'Service Area — Jaeco Real Estate Media',
+    description: 'Real estate photography serving DE, NJ, PA, and MD within 100 miles of Bear, DE.',
+    url: 'https://www.jaecomedia.com/service-area',
+  },
 }
 
 const states = ['Delaware', 'New Jersey', 'Pennsylvania', 'Maryland']

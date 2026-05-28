@@ -9,8 +9,16 @@ import {
 } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Portfolio — Jaeco Real Estate Media',
-  description: 'Real estate photography portfolio — interior, aerial, floor plans, and virtual staging.',
+  title: 'Portfolio — Real Estate Photography, Drone, Floor Plans & Virtual Staging',
+  description:
+    'Browse the Jaeco Real Estate Media portfolio — interior and exterior photography, drone aerials, floor plans, and virtual staging across Delaware, PA, MD, and NJ.',
+  alternates: { canonical: 'https://www.jaecomedia.com/portfolio' },
+  openGraph: {
+    title: 'Portfolio — Jaeco Real Estate Media',
+    description: 'Real estate photography, drone aerials, floor plans, and virtual staging.',
+    url: 'https://www.jaecomedia.com/portfolio',
+    images: [{ url: '/images/portfolio/interior/interior-06.png', width: 1200, height: 630 }],
+  },
 }
 
 const sections = [

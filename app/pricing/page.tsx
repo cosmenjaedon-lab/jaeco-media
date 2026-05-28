@@ -4,8 +4,15 @@ import Button from '@/components/ui/Button'
 import { includedFeatures, pricingTiers, pricingAddOns } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Pricing — Jaeco Real Estate Media',
-  description: 'Real estate photography pricing — packages, add-ons, and agent rates.',
+  title: 'Pricing — Real Estate Photography Packages & Rates',
+  description:
+    'Transparent real estate photography pricing — interior, drone, floor plans, virtual staging, and video packages. No hidden fees. Fast turnaround. Serving Delaware, PA, MD & NJ.',
+  alternates: { canonical: 'https://www.jaecomedia.com/pricing' },
+  openGraph: {
+    title: 'Pricing — Jaeco Real Estate Media',
+    description: 'Simple, transparent real estate photography packages with no hidden fees.',
+    url: 'https://www.jaecomedia.com/pricing',
+  },
 }
 
 export default function PricingPage() {

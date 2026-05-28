@@ -93,16 +93,16 @@ export const interiorImages: PortfolioImage[] = [
   { src: '/images/portfolio/interior/interior-04.png', alt: 'Interior real estate photo 4' },
   { src: '/images/portfolio/interior/interior-05.png', alt: 'Interior real estate photo 5' },
   { src: '/images/portfolio/interior/interior-06.png', alt: 'Interior real estate photo 6' },
-  { src: '/images/portfolio/interior/interior-07.jpg', alt: 'Interior real estate photo 7' },
-  { src: '/images/portfolio/interior/interior-08.jpg', alt: 'Interior real estate photo 8' },
-  { src: '/images/portfolio/interior/interior-09.jpg', alt: 'Interior real estate photo 9' },
-  { src: '/images/portfolio/interior/interior-10.jpg', alt: 'Interior real estate photo 10' },
-  { src: '/images/portfolio/interior/interior-11.jpg', alt: 'Interior real estate photo 11' },
-  { src: '/images/portfolio/interior/interior-12.jpg', alt: 'Interior real estate photo 12' },
-  { src: '/images/portfolio/interior/interior-13.jpg', alt: 'Interior real estate photo 13' },
-  { src: '/images/portfolio/interior/interior-14.jpg', alt: 'Interior real estate photo 14' },
-  { src: '/images/portfolio/interior/interior-15.jpg', alt: 'Interior real estate photo 15' },
-  { src: '/images/portfolio/interior/interior-16.jpeg', alt: 'Interior real estate photo 16' },
+  { src: '/images/portfolio/interior/interior-07.webp', alt: 'Interior real estate photo 7' },
+  { src: '/images/portfolio/interior/interior-08.webp', alt: 'Interior real estate photo 8' },
+  { src: '/images/portfolio/interior/interior-09.webp', alt: 'Interior real estate photo 9' },
+  { src: '/images/portfolio/interior/interior-10.webp', alt: 'Interior real estate photo 10' },
+  { src: '/images/portfolio/interior/interior-11.webp', alt: 'Interior real estate photo 11' },
+  { src: '/images/portfolio/interior/interior-12.webp', alt: 'Interior real estate photo 12' },
+  { src: '/images/portfolio/interior/interior-13.webp', alt: 'Interior real estate photo 13' },
+  { src: '/images/portfolio/interior/interior-14.webp', alt: 'Interior real estate photo 14' },
+  { src: '/images/portfolio/interior/interior-15.webp', alt: 'Interior real estate photo 15' },
+  { src: '/images/portfolio/interior/interior-16.webp', alt: 'Interior real estate photo 16' },
 ]
 
 // Portfolio — Drone / Aerial Photography
@@ -115,14 +115,14 @@ export const droneImages: PortfolioImage[] = [
 
 // Portfolio — Floor Plans
 export const floorPlanImages: PortfolioImage[] = [
-  { src: '/images/portfolio/floor-plans/floor-plan-01.jpg', alt: 'Floor plan 1' },
-  { src: '/images/portfolio/floor-plans/floor-plan-02.jpg', alt: 'Floor plan 2' },
-  { src: '/images/portfolio/floor-plans/floor-plan-03.jpg', alt: 'Floor plan 3' },
-  { src: '/images/portfolio/floor-plans/floor-plan-04.jpg', alt: 'Floor plan 4' },
-  { src: '/images/portfolio/floor-plans/floor-plan-05.jpg', alt: 'Floor plan 5' },
-  { src: '/images/portfolio/floor-plans/floor-plan-06.jpg', alt: 'Floor plan 6' },
-  { src: '/images/portfolio/floor-plans/floor-plan-07.jpg', alt: 'Floor plan 7' },
-  { src: '/images/portfolio/floor-plans/floor-plan-08.jpg', alt: 'Floor plan 8' },
+  { src: '/images/portfolio/floor-plans/floor-plan-01.webp', alt: 'Floor plan 1' },
+  { src: '/images/portfolio/floor-plans/floor-plan-02.webp', alt: 'Floor plan 2' },
+  { src: '/images/portfolio/floor-plans/floor-plan-03.webp', alt: 'Floor plan 3' },
+  { src: '/images/portfolio/floor-plans/floor-plan-04.webp', alt: 'Floor plan 4' },
+  { src: '/images/portfolio/floor-plans/floor-plan-05.webp', alt: 'Floor plan 5' },
+  { src: '/images/portfolio/floor-plans/floor-plan-06.webp', alt: 'Floor plan 6' },
+  { src: '/images/portfolio/floor-plans/floor-plan-07.webp', alt: 'Floor plan 7' },
+  { src: '/images/portfolio/floor-plans/floor-plan-08.webp', alt: 'Floor plan 8' },
   { src: '/images/portfolio/floor-plans/floor-plan-09.png', alt: 'Floor plan 9' },
 ]
 
@@ -134,11 +134,11 @@ export const virtualStagingImages: PortfolioImage[] = [
   { src: '/images/portfolio/virtual-staging/staging-04.png', alt: 'Virtual staging 4' },
   { src: '/images/portfolio/virtual-staging/staging-06.png', alt: 'Virtual staging 6' },
   { src: '/images/portfolio/virtual-staging/staging-07.png', alt: 'Virtual staging 7' },
-  { src: '/images/portfolio/virtual-staging/staging-08.jpg', alt: 'Virtual staging 8' },
-  { src: '/images/portfolio/virtual-staging/staging-09.jpg', alt: 'Virtual staging 9' },
-  { src: '/images/portfolio/virtual-staging/staging-10.jpg', alt: 'Virtual staging 10' },
-  { src: '/images/portfolio/virtual-staging/staging-11.jpg', alt: 'Virtual staging 11' },
-  { src: '/images/portfolio/virtual-staging/staging-12.jpg', alt: 'Virtual staging 12' },
+  { src: '/images/portfolio/virtual-staging/staging-08.webp', alt: 'Virtual staging 8' },
+  { src: '/images/portfolio/virtual-staging/staging-09.webp', alt: 'Virtual staging 9' },
+  { src: '/images/portfolio/virtual-staging/staging-10.webp', alt: 'Virtual staging 10' },
+  { src: '/images/portfolio/virtual-staging/staging-11.webp', alt: 'Virtual staging 11' },
+  { src: '/images/portfolio/virtual-staging/staging-12.webp', alt: 'Virtual staging 12' },
 ]
 
 // Legacy combined array — kept for any references
