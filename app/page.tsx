@@ -187,7 +187,7 @@ export default function HomePage() {
             </div>
 
             {/* Outlined price number */}
-            <div className="hidden md:block shrink-0 select-none" aria-hidden="true">
+            <div className="shrink-0 select-none" aria-hidden="true">
               <p
                 className="font-black tracking-tighter leading-none text-transparent"
                 style={{
