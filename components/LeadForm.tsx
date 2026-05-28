@@ -58,9 +58,30 @@ export default function LeadForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setFormState('loading')
-    // ⏸ Submission logic wired after user confirms delivery method
-    await new Promise((r) => setTimeout(r, 800))
-    setFormState('success')
+
+    const form = e.currentTarget
+    const data = new FormData(form)
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          phone: data.get('phone'),
+          propertyType: data.get('propertyType'),
+          services: selectedServices,
+          address: data.get('address'),
+          message: data.get('message'),
+        }),
+      })
+
+      if (!res.ok) throw new Error()
+      setFormState('success')
+    } catch {
+      setFormState('error')
+    }
   }
 
   if (formState === 'success') {
