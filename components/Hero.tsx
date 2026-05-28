@@ -1,13 +1,16 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
     <section className="relative h-screen bg-[#0A0A0A] flex items-center overflow-hidden">
-      {/* ⏸ Hero background — replace the div below with a Next.js <Image> once hero photo is provided.
-          Example:
-          <Image src="/images/hero.jpg" alt="Hero" fill className="object-cover opacity-70" priority />
-      */}
-      <div className="absolute inset-0 bg-[#0A0A0A]" />
+      <Image
+        src="/images/portfolio/interior/interior-06.png"
+        alt="Real estate photography"
+        fill
+        className="object-cover opacity-60"
+        priority
+      />
 
       {/* Subtle gradient overlay — keep this even when photo is added */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
